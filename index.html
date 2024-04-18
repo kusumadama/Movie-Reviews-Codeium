@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Review Site</title>
+<style>
+/* CSS Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Upcoming</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button id="darkModeToggle">Dark/Light Mode</button>
+  </nav>
+</header>
+<main>
+  <section id="hero">
+    <h1>Welcome to our Movie Review Site</h1>
+    <!-- Add latest reviews/trailers and search here -->
+  </section>
+  <section id="reviews">
+    <h2>Movie Reviews</h2>
+    <!-- Add movie details, ratings, and comments here -->
+  </section>
+  <section id="upcoming">
+    <h2>Upcoming Movies</h2>
+    <!-- Add grid/list with filters and search here -->
+  </section>
+</main>
+<footer>
+  <ul>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Instagram</a></li>
+  </ul>
+</footer>
+<script>
+// JavaScript
+const darkModeToggle = document.getElementById('darkModeToggle');
+let darkMode = false;
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = !darkMode;
+  if (darkMode) {
+    document.body.style.backgroundColor = '#333';
+    document.body.style.color = 'white';
+  } else {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+  }
+});
+</script>
+</body>
+</html>
