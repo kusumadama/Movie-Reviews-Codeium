@@ -1,97 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Movie Review Site</title>
-<style>
-/* CSS Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+    <title>Movie Review Website</title>
+    <style>
+        /* CSS styles for the movie poster */
+        .movie-poster {
+            width: 300px;
+            height: 450px;
+            background-color: #f1f1f1;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
+        .movie-poster img {
+            max-width: 100%;
+            max-height: 100%;
+        }
 
-nav ul {
-  list-style-type: none;
-}
+        /* CSS styles for the movie details */
+        .movie-details {
+            display: flex;
+            flex-direction: column;
+        }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
+        .movie-details h2 {
+            margin-top: 0;
+        }
 
-button {
-  cursor: pointer;
-}
+        .movie-details p {
+            margin-bottom: 10px;
+        }
 
-main {
-  padding: 20px;
-}
+        /* CSS styles for the movie reviews */
+        .movie-reviews {
+            margin-top: 20px;
+        }
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-</style>
+        .movie-review {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .movie-review h3 {
+            margin-top: 0;
+        }
+
+        /* CSS styles for the rating system */
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rating input[type="radio"] {
+            display: none;
+        }
+
+        .rating label {
+            font-size: 24px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .rating label:hover {
+            color: orange;
+        }
+
+        /* CSS styles for the social sharing buttons */
+        .social-sharing {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-sharing a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #0077B5;
+            cursor: pointer;
+        }
+
+        .social-sharing a:hover {
+            color: orange;
+        }
+
+        /* CSS styles for the movie news section */
+        .movie-news {
+            margin-top: 20px;
+        }
+
+        .news-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .news-item h3 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Reviews</a></li>
-      <li><a href="#">Upcoming</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <button id="darkModeToggle">Dark/Light Mode</button>
-  </nav>
-</header>
-<main>
-  <section id="hero">
-    <h1>Welcome to our Movie Review Site</h1>
-    <!-- Add latest reviews/trailers and search here -->
-  </section>
-  <section id="reviews">
-    <h2>Movie Reviews</h2>
-    <!-- Add movie details, ratings, and comments here -->
-  </section>
-  <section id="upcoming">
-    <h2>Upcoming Movies</h2>
-    <!-- Add grid/list with filters and search here -->
-  </section>
-</main>
-<footer>
-  <ul>
-    <li><a href="#">Facebook</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Instagram</a></li>
-  </ul>
-</footer>
-<script>
-// JavaScript
-const darkModeToggle = document.getElementById('darkModeToggle');
-let darkMode = false;
+    <!-- Movie poster -->
+    <div class="movie-poster">
+        <img src="movie-poster.jpg" alt="Movie Poster">
+    </div>
 
-darkModeToggle.addEventListener('click', () => {
-  darkMode = !darkMode;
-  if (darkMode) {
-    document.body.style.backgroundColor = '#333';
-    document.body.style.color = 'white';
-  } else {
-    document.body.style.backgroundColor = 'white';
-    document.body.style.color = 'black';
-  }
-});
-</script>
-</body>
-</html>
+    <!-- Movie details -->
+    <div class="movie-details">
+        <h2>Movie Title</h2>
+        <p>Genre: Action, Adventure</p>
+        <p>Release Date: January 1, 2022</p>
+        <p>Director: John Doe</p>
+        <p>Cast: John Smith, Jane Smith</p>
+    </div>
+
+    <!-- Movie reviews -->
+    <div class="movie-reviews">
+        <div class="movie-review">
+            <h3>Reviewer 1</h3>
+            <p>Rating: 4/5</p>
+            <p>Review: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel odio et justo ultricies fringilla. Nullam auctor, odio sed eleifend vehicula.</p>
+        </div>
+
+        <div class="movie-review">
+            <h3>Reviewer 2</h3>
+            <p>Rating: 3.5/5</p>
